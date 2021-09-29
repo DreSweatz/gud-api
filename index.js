@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
     "fun_endpoints": [
       "GET /fun/dadjoke",
       "GET /fun/pickuplines",
-      "GET /fun/8ball?ques=text"
+      "GET /fun/8ball"
     ],
     "interaction_endpoints": [
       "GET /interactions/sfw/hug"
@@ -31,3 +31,4 @@ app.listen(5000, () => {
   console.log("API is up and running, I think")
 })
 app.set('json spaces', 1);
+

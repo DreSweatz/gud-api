@@ -8,6 +8,7 @@
     "anilist-node": "^1.9.1",
     "anime-api": "^1.2.0",
     "canvas": "^2.8.0",
+    "discord-image-generation": "^1.4.9",
     "express": "^4.17.1",
     "fs": "^0.0.1-security",
     "node-fetch": "^2.6.1",
