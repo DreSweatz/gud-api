@@ -5,13 +5,16 @@
   "main": "index.js",
   "dependencies": {
     "anilist-node": "^1.9.1",
+    "anime-api": "^1.2.0",
+    "anime-images-api": "^2.0.0",
     "canvas": "^2.8.0",
     "express": "^4.17.1",
     "fs": "^0.0.1-security",
     "keep-alive": "^0.1.0",
     "mal-scraper": "^2.11.3",
     "ms": "^3.0.0-canary.1",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "random": "^3.0.6"
   },
   "devDependencies": {},
   "scripts": {
