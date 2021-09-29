@@ -1,6 +1,6 @@
 const fetch = require('node-fetch')
 module.exports = {
-  name: "fun/pickupline",
+  name: "pickupline",
   run: async(req, res) => {
     r = await fetch("https://not-an-api.gofaizen.repl.co/pickuplines")
     line = await r.json()

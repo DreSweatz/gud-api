@@ -6,23 +6,25 @@ require("./routes")(app)
 
 app.get("/", (req, res) => {
   res.send({
-  "base_url": "https://gud-api.gofaizen.repl.co",
   "discord_server": "Soon™ & join https://discord.gg/HbWpEAcmFk",
-  "twitter": "https://twitter.com/TheRealFaizen",
-  "github_repo": "https://github.com/NotFaizen/gud-api",
+  
   "endpoints": {
     "fun_endpoints": [
       "GET /fun/dadjoke",
       "GET /fun/pickuplines",
+      "GET /fun/8ball?ques=text"
     ],
     "interaction_endpoints": [
-      "GET /interactions/hug"
+      "GET /interactions/sfw/hug"
     ],
     "nsfw_endpoints": [
-      "Later, I am lazy"
+      "GET /nsfw/ass",
     ]
+  },
+  "extra_stuff": {
+    "github": "https://github.com/NotFaizen/gud-api" 
   }
-  }) // endpoint list soonTM
+  })
 })
 
 app.listen(5000, () => {
