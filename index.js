@@ -9,6 +9,7 @@ app.get("/", (req, res) => {
   "base_url": "https://gud-api.gofaizen.repl.co",
   "discord_server": "Soon™ & join https://discord.gg/HbWpEAcmFk",
   "twitter": "https://twitter.com/TheRealFaizen",
+  "github_repo": "https://github.com/NotFaizen/gud-api",
   "endpoints": {
     "fun_endpoints": [
       "GET /fun/dadjoke",
