@@ -12,7 +12,8 @@ app.get("/", (req, res) => {
     "fun_endpoints": [
       "GET /fun/dadjoke",
       "GET /fun/pickuplines",
-      "GET /fun/8ball"
+      "GET /fun/8ball",
+      "GET /fun/animequote"
     ],
     "interaction_endpoints": [
       "GET /interactions/sfw/hug"
