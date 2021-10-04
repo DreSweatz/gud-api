@@ -10,16 +10,25 @@ app.get("/", (req, res) => {
   
   "endpoints": {
     "fun_endpoints": [
+      "GET /fun/8ball",
+      "GET /fun/animequote",
       "GET /fun/dadjoke",
       "GET /fun/pickuplines",
-      "GET /fun/8ball",
-      "GET /fun/animequote"
+      "GET /fun/joke/:type",
     ],
     "interaction_endpoints": [
-      "GET /interactions/sfw/hug"
+      "GET /interactions/sfw/hug",
     ],
     "nsfw_endpoints": [
       "GET /nsfw/ass",
+      "GET /nsfw/bdsm",
+      "GET /nsfw/blowjob",
+      "GET /nsfw/hentai",
+      "GET /nsfw/lewdneko",
+    ],
+    "misc_endpoints": [
+      "GET /misc/neko",
+      "GET /misc/foxgirl",
     ]
   },
   "extra_stuff": {

@@ -1,8 +1,8 @@
 const akaneko = require('akaneko');
 module.exports = {
-  name: "nsfw/ass",
+  name: "nsfw/blowjob",
   run: async(req, res) => {
-    var image = await akaneko.nsfw.ass()
+    var image = await akaneko.nsfw.blowjob()
     res.json({ 
       url: image,  
     })

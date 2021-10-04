@@ -1,4 +1,4 @@
-const deeznuts = require("../assets/responses.json")
+const deeznuts = require("../assets/8ball.json")
 module.exports = {
   name: "fun/8ball",
   run: async(req, res) => {

@@ -11,8 +11,10 @@
     "discord-image-generation": "^1.4.9",
     "express": "^4.17.1",
     "fs": "^0.0.1-security",
+    "morse": "^0.1.0",
     "node-fetch": "^2.6.1",
-    "random": "^3.0.6"
+    "random": "^3.0.6",
+    "xmorse": "^1.0.0"
   },
   "devDependencies": {},
   "scripts": {
