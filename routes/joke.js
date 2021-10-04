@@ -1,5 +1,10 @@
 const fetch = require('node-fetch')
 const mom = require("../assets/momjokes.json")
+async function yomama() {
+  r = await fetch("https://api.yomomma.info/")
+  data = await r.json()
+  return await data
+}
 module.exports = {
   name: "fun/joke/:type",
   run: async(req, res) => {
@@ -11,8 +16,11 @@ module.exports = {
     } else if (type.toLowerCase() == "mom") {
       rand_mom = mom[Math.floor(Math.random() * mom.length)]
       res.json({ joke: rand_mom })
+    } else if (type.toLowerCase() == "yomama") {
+      mama = await yomama()
+      res.json({ joke: mama.joke })
     } else {
-      res.json({ error: "Syntax error! Valid syntax: https://gud-api.gofaizen.repl.co/fun/joke/< mom | dad >" })
+      res.json({ error: "Syntax error! Valid syntax: https://gud-api.gofaizen.repl.co/fun/joke/< mom | dad | yomama >" })
     }
   }
 }
