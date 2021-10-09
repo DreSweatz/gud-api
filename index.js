@@ -1,44 +1,26 @@
+// ------ PACKAGE IMPORTS ------ //
 const express = require("express")
 const app = express()
+const monitor = require("express-status-monitor")
 
-
+// ------ ROUTES HANDLER ------ //
 require("./routes")(app)
 
+// ------ HOME PAGE ------ //
 app.get("/", (req, res) => {
-  res.send({
-  "discord_server": "Soon™ & join https://discord.gg/HbWpEAcmFk",
-  
-  "endpoints": {
-    "fun_endpoints": [
-      "GET /fun/8ball",
-      "GET /fun/animequote",
-      "GET /fun/dadjoke",
-      "GET /fun/pickuplines",
-      "GET /fun/joke/:type",
-    ],
-    "interaction_endpoints": [
-      "GET /interactions/sfw/hug",
-    ],
-    "nsfw_endpoints": [
-      "GET /nsfw/ass",
-      "GET /nsfw/bdsm",
-      "GET /nsfw/blowjob",
-      "GET /nsfw/hentai",
-      "GET /nsfw/lewdneko",
-    ],
-    "misc_endpoints": [
-      "GET /misc/neko",
-      "GET /misc/foxgirl",
-    ]
-  },
-  "extra_stuff": {
-    "github": "https://github.com/NotFaizen/gud-api" 
-  }
-  })
+  res.sendFile(__dirname + '/home.json')
 })
 
+app.get('/*', (req, res) => {
+  res.send({ error: "Invalid endpoint" })
+})
+
+// ------ API CONFIGS AND SHIT ------ //
 app.listen(5000, () => {
   console.log("API is up and running, I think")
 })
-app.set('json spaces', 1);
+
+app.set('json spaces', 1); // clean look
+app.use(monitor()) // logs an stuff
+
 
