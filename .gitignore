@@ -2,3 +2,6 @@ assets/utils.txt
 node_modules/
 routes/template.js
 assets/faizenimages.json
+.replit
+assets/keys.json
+database/

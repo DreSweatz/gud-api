@@ -1,7 +1,22 @@
-// ------ PACKAGE IMPORTS ------ //
+// ------ PACKAGE IMPORTS AND VARS ------ //
 const express = require("express")
 const app = express()
 const monitor = require("express-status-monitor")
+const aoi = require('aoi.js')
+const bot = new aoi.Bot({
+  token: process.env.token,
+  prefix: "gud",
+  autoUpdate: true,
+  suppressAll: false
+})
+
+// ------ BOT COMMANDS AND CONFIGS ------ //
+
+bot.onMessage({
+  respondToBots: false,
+  guildOnly: true
+})
+bot.loadCommands(`./commands/`)
 
 // ------ ROUTES HANDLER ------ //
 require("./routes")(app)
